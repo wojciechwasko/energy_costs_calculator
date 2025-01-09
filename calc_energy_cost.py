@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# SPDX-License-Identifier: MIT
+
 import argparse
 import numpy as np
 import pandas as pd
