@@ -76,6 +76,18 @@ CSV Format:
     - Energy Consumed: Energy taken from the grid (kWh).
     - Energy Produced: Energy supplied back to the grid (kWh).
     - Net Energy: Difference between consumed and produced energy (kWh).
+
+Schedules defined based on data from https://www.energa.pl/dom/umowy/taryfa (accessed Jan 9th 2025):
+    - until October 2025:
+      "G11;00:00-00:00=0,5"
+      "G12;00:00-06:00=0,4721;06:00-13:00=0,5;13:00-15:00=0,4721;15:00-22:00=0,5;22:00-00:00=0,4721"
+      "G12w;00:00-06:00=0,4957;06:00-13:00=0,5;13:00-15:00=0,4957;15:00-22:00=0,5;22:00-00:00=0,4957;weekend=0,4957"
+      "G12r;00:00-07:00=0,3796;07:00-13:00=0,5;13:00-16:00=0,3796;16:00-22:00=0,5;22:00-00:00=0,3796"
+    - after October 2025:
+      "G11;00:00-00:00=0,6249"
+      "G12;00:00-06:00=0,4721;06:00-13:00=0,7283;13:00-15:00=0,4721;15:00-22:00=0,7283;22:00-00:00=0,4721"
+      "G12w;00:00-06:00=0,4957;06:00-13:00=0,7620;13:00-15:00=0,4957;15:00-22:00=0,7620;22:00-00:00=0,4957;weekend=0,4957"
+      "G12r;00:00-07:00=0,3796;07:00-13:00=0,8388;13:00-16:00=0,3796;16:00-22:00=0,8388;22:00-00:00=0,3796"
     """,
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
